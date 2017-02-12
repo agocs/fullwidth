@@ -2,8 +2,10 @@
 
 # Installation
 
-`go build fullwidth.go`
-`cp fullwidth /usr/local/bin`
+```
+go build fullwidth.go
+cp fullwidth /usr/local/bin
+```
 
 # Usage
 
