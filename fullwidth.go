@@ -10,13 +10,12 @@ import (
 func main() {
 	var bio = bufio.NewReader(os.Stdin)
 
-	var line, _, err = bio.ReadLine()
-	if err != nil {
-		print(err.Error())
-		os.Exit(1)
+	for {
+		var line, _, err= bio.ReadLine()
+		if err != nil {
+			os.Exit(0)
+		}
+		var wideline = width.Widen.String(string(line))
+		fmt.Println(wideline)
 	}
-
-	var widener = width.Widen
-	var wideline = widener.String(string(line))
-	fmt.Println(wideline)
 }
